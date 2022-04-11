@@ -10,5 +10,16 @@ package projeto;
  * @author ALUNO
  */
 public class Cliente extends Pessoa{
-    
+       protected String email;
+    protected String telefone;
+    protected String endereco;
+    protected String placa;
+
+    public Cliente(String email, String telefone, String endereco, String placa, String nome, String cpf) {
+        super(nome, cpf);
+        this.email = email;
+        this.telefone = telefone;
+        this.endereco = endereco;
+        this.placa = placa;
+    }
 }
