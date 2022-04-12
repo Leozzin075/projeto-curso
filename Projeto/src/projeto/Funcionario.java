@@ -10,5 +10,11 @@ package projeto;
  * @author ALUNO
  */
 public class Funcionario extends Pessoa{
-    
+        protected String senha;
+    protected String logar;
+    public funcionarios(String senha, String nome, String cpf, String logar) {
+        super(nome, cpf);
+        this.senha = senha;
+        this.logar = logar;
+    }
 }
