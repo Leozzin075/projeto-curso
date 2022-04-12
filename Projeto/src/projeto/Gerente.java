@@ -10,5 +10,10 @@ package projeto;
  * @author ALUNO
  */
 public class Gerente extends Funcionario{
+       public void cadastrarFuncionario(Funcionario n){
+        if(n.instanceOf(Gerente)){
+            
+        }else if(n.instanceOf(Mecanico))
+    }
     
 }
