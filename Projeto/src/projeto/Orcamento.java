@@ -10,5 +10,19 @@ package projeto;
  * @author ALUNO
  */
 public class Orcamento {
+    String cpfCliente;
+    String CpfMecanico;
+    Double valor;
+    String Serviço;
+
+    public Orcamento(String cpfCliente, String CpfMecanico, Double valor, String Serviço) {
+        this.cpfCliente = cpfCliente;
+        this.CpfMecanico = CpfMecanico;
+        this.valor = valor;
+        this.Serviço = Serviço;
+    }
+    
+    
+    
     
 }
