@@ -127,11 +127,23 @@ public class Projeto {
         }
     }
 
-    private static void telaMecanico(Funcionario mecanico) {
-        
-    }
+    private static void telaMecanico(Mecanico mecanico) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Digite 1 para cadastrar Orçamento");
+        String opcao = scan.nextLine();
+        if(opcao.equals("1")){
+            System.out.println("Digite o cpfCliente");
+            String cpfCliente = scan.nextLine();
+            System.out.println("Digite o cpfMecanico");
+            String cpfMecanico = scan.nextLine();
+            System.out.println("Digite a valor");
+            String valor = scan.nextLine();
+            System.out.println("Digite o servico");
+            String servico = scan.nextLine();
+            mecanico.cadastrarOrcamento(cpfCliente, cpfMecanico, valor, servico);
+        }    }
 
-    private static void telaRecepcionista(Funcionario recepcionista) {
+    private static void telaRecepcionista(Recepcionista recepcionista) {
         
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite 1 para cadastrar Cliente");
@@ -145,7 +157,7 @@ public class Projeto {
             String endereco = scan.nextLine();
             System.out.println("Digite a sua placa:");
             String placa = scan.nextLine();
-            Recepcionista.cadastrarCliente(email, telefone, endereco, placa);
+            recepcionista.cadastrarCliente(email, telefone, endereco, placa);
             
         }
     }
