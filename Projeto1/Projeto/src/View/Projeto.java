@@ -112,8 +112,10 @@ public class Projeto {
     private static void telaGerente(Gerente gerente) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite 1 para cadastrar funcionario");
+        System.out.println("Digite 2 para visualizar os clintes");
         String opcao = scan.nextLine();
-        if(opcao.equals("1")){
+        switch(opcao){
+        case"1":
             System.out.println("Digite o nome");
             String nome = scan.nextLine();
             System.out.println("Digite o cpf");
@@ -122,10 +124,17 @@ public class Projeto {
             String senha = scan.nextLine();
             System.out.println("Digite o cargo\n 1 para gerente, 2 para mecanico, 3 para recepcionista");
             String cargo = scan.nextLine();
-            gerente.cadastrarFuncionario(nome, cpf, senha, cargo);
-            
+            gerente.cadastrarFuncionario(nome, cpf, senha, cargo);    
+            break;
+        case "2":
+            gerente.visualizarCliente();
+            break;
+        default:
+            System.out.println("Opcao invalida");
+            break;
         }
     }
+            
 
     private static void telaMecanico(Mecanico mecanico) {
         Scanner scan = new Scanner(System.in);
