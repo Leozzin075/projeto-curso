@@ -75,6 +75,45 @@ public class Gerente extends Funcionario {
             e.printStackTrace();
         }
     }
+    public static void visualizarCliente(){
+        File dir = new File("C:\\ArquivosProjeto");
+        //Cria um novo arquivo
+        File arq = new File(dir, "Cliente.txt");
+        try {
+            FileReader fileReader = new FileReader(arq);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String linha = "";
 
+            //Lista que irá guardar o resultado, ou seja,
+            // cada linha do arquivo que corresponde a um User
+            List <String> result = new ArrayList();
+
+            while ((linha = bufferedReader.readLine()) != null) {
+                System.out.println(linha);
+                if (linha != null && !linha.isEmpty()) {
+                    result.add(linha);
+                }
+            }
+            fileReader.close();
+            bufferedReader.close();
+
+            for (String s : result) {
+                //Usamos o método split da classe String
+                // para separar as partes entre os ponto e vírgulas.
+                //Guardamos o resultado em um array
+                String[] user = s.split(";");
+
+                //Criamos um objeto User e setamos em seus atributos
+                //as posições correspondentes do array
+                User u = new User();
+               
+
+                //exibe o conteúdo do objeto u
+                System.out.println(u.toString());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+       
     
 }
